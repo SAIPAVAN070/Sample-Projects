@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="script.js">
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+    </header>
+
+    <section class="user-login">
+        <label for="role">Select User Role:</label>
+        <select id="role" onchange="updateRole()">
+            <option value="admin">Admin</option>
+            <option value="doctor">Doctor</option>
+            <option value="nurse">Nurse</option>
+        </select>
+        <button onclick="login()">Login</button>
+    </section>
+
+    <section class="temperature-simulation">
+        <h2>Temperature Sensor Simulation</h2>
+        <p id="temperature-status">Current Temperature: -- °C</p>
+        <p id="alert-status">No alerts.</p>
+        <button onclick="simulateTemperature()">Simulate Temperature</button>
+    </section>
+
+    <section class="patient-info">
+        <h2>Patient Information</h2>
+        <button onclick="showPatientInfo()">Show Patient Info</button>
+        <div id="patient-data"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hospital Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
